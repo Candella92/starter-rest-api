@@ -50,6 +50,12 @@ app.get('/:col/:key', async (req, res) => {
   console.log(JSON.stringify(item, null, 2))
   res.json(item).end()
 })
+app.get('/c', async (req, res) => {
+  const col = req.params.col
+  const key = req.params.key
+
+  res.send('Clifford Neequaye').end()
+})
 
 // Get a full listing
 app.get('/:col', async (req, res) => {
